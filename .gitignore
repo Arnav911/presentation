@@ -1,0 +1,61 @@
+# Environment and configuration files
+.env
+.env.*
+!.env.example
+userConfig.json
+
+# Python virtual environment and caching
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.fastembed_cache/
+
+# Node.js dependencies and Next.js builds
+node_modules/
+.next/
+.next-build/
+out/
+build/
+dist/
+.npm
+.eslintcache
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+database.db
+container.db
+chroma/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# App-specific runtime directories
+app_data/
+tmp/
+debug/
+generated_models/
+nltk/
+
+# IDE/Editor folders
+.vscode/
+.idea/
+.cursor/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
