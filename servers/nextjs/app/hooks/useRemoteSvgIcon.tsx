@@ -144,8 +144,11 @@ export function useRemoteSvgIcon(url?: string, options: RemoteSvgOptions = {}) {
         return;
       }
       try {
-       
-        const res = await fetch(url);
+        let fetchUrl = url;
+        if (url && url.startsWith("https://presentation-ai-public.s3.ap-southeast-1.amazonaws.com/")) {
+          fetchUrl = url.replace("https://presentation-ai-public.s3.ap-southeast-1.amazonaws.com/", "/api/s3-proxy/");
+        }
+        const res = await fetch(fetchUrl);
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }

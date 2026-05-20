@@ -16,6 +16,10 @@ const nextConfig = {
         destination: 'http://localhost:8000/app_data/images/:path*',
       },
       {
+        source: '/api/s3-proxy/:path*',
+        destination: 'https://presentation-ai-public.s3.ap-southeast-1.amazonaws.com/:path*',
+      },
+      {
         source: '/api/v1/:path*',
         destination: 'http://localhost:8000/api/v1/:path*',
       },
